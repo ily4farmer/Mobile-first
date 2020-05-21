@@ -1,6 +1,23 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
 }
 
 img {
@@ -25,6 +42,7 @@ img {
   }
 }
 
+/** Общие стили для кнопок**/
 .button {
   background-color: #ffd200;
   border-radius: 10px;
@@ -60,6 +78,8 @@ img {
 }
 
 .navbar__address {
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,13 +91,26 @@ img {
 
 .navbar__button {
   margin-left: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar__button:hover {
+  -webkit-box-shadow: 0 0 15px #ffd200;
+          box-shadow: 0 0 15px #ffd200;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar__button:focus {
+  outline: none;
 }
 
 .navbar__phone {
   display: inline-block;
-  font-family: MuseoSansCyrl;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   font-size: 20px;
-  font-weight: 400;
   color: #333333;
   text-decoration: none;
   margin-top: 10px;
@@ -111,21 +144,22 @@ img {
 .hero-text {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 .hero-text__title {
   font-size: 41px;
   line-height: 55px;
-  font-weight: 700px;
+  font-weight: 800px;
   margin-bottom: 40px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .hero-text__subtitle {
   display: inline-block;
   margin-bottom: 70px;
   font-size: 20px;
-  font-weight: 700;
 }
 
 .hero-list {
@@ -192,11 +226,20 @@ img {
   .hero-list__item {
     margin-bottom: 20px;
   }
-  .hero-list-text {
+  .hero-list__text {
     font-size: 12px;
   }
   .hero-list__image {
     margin-right: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-list {
+    margin-bottom: 0;
+  }
+  .hero-list__text {
+    max-width: 230px;
   }
 }
 /*# sourceMappingURL=style.css.map */
