@@ -1,0 +1,17 @@
+.button
+    transition: 0.2s
+    &:hover 
+        box-shadow: 0 0 10px $main-color 
+        color: white 
+        cursor: pointer//меняем курсор прии наведении на кнопку
+        &::after
+            width: 100%
+    &:after
+        content: ""
+        display: block
+        height: 2px
+        background-color: white
+        width: 0%
+        transition: 0.2s
+    &:focus
+        outline: none//убираем обводку после клика
